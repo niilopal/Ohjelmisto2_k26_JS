@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex6</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let swtch = confirm('Should I calculate the square root?')
+    switch(swtch) {
+        case true:
+            let num = parseInt(prompt('Enter number:'));
+            switch(num>=0) {
+                case true:
+                    document.querySelector('#result').innerHTML = 'The square root of ' + num + ' is ' + Math.sqrt(num);
+                    break;
+                case false:
+                    document.querySelector('#result').innerHTML = 'The square root of a negative number is not defined';
+                    break;
+            }
+            break;
+        default:
+            document.querySelector('#result').innerHTML = 'The square root is not calculated.';
+            break;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex5</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let year = parseInt(prompt('Enter year:'))
+    switch(year%4) {
+        case 0:
+            switch(year%100) {
+                case 0:
+                    switch(year%400) {
+                        case 0:
+                            document.querySelector('#result').innerHTML = 'The year ' + year + ' is a leap year';
+                            break;
+                        default:
+                            document.querySelector('#result').innerHTML = 'The year ' + year + ' is not a leap year';
+                            break;
+                    }
+                    break;
+                default:
+                    document.querySelector('#result').innerHTML = 'The year ' + year + ' is a leap year';
+                    break;
+            }
+            break;
+        default:
+            document.querySelector('#result').innerHTML = 'The year ' + year + ' is not a leap year';
+            break;
+    }
+</script>
+</body>
+</html>

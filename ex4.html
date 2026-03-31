@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex4</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let name = prompt('Enter name:')
+    let num = Math.floor(Math.random()*4)
+    let house
+    switch(num) {
+        case 0:
+            house = 'Gryffindor';
+            break;
+        case 1:
+            house = 'Hufflepuff';
+            break;
+        case 2:
+            house = 'Ravenclaw';
+            break;
+        case 3:
+            house = 'Slytherin';
+            break;
+        default:
+            console.log('Well, this is broken.')
+            break;
+    }
+    document.querySelector('#result').innerHTML = name + ', you are a ' + house
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex7</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let dice = prompt("Enter number of dice:")
+    let sum = 0
+    let die
+    for (let i = 0; i<dice; i++) {
+        die = Math.floor(Math.random() * 6) + 1
+        sum = sum + die
+    }
+    document.querySelector('#result').innerHTML = 'Sum of the dice: ' + sum
+</script>
+</body>
+</html>
