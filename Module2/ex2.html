@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex2</title>
+</head>
+<body id="result">
+<script>
+    const ol = document.createElement('ol')
+    const partis = []
+    let parts = prompt("How many participants?")
+    for (let i = 0; i < parts; i++) {
+        partis.push(prompt("Enter name of participant: "))
+    }
+    for (let i = 0; i < partis.length; i++) {
+        let li = document.createElement('li')
+        li.textContent = partis[i]
+        ol.appendChild(li)
+    }
+    document.querySelector("#result").appendChild(ol)
+</script>
+</body>
+</html>
