@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex7</title>
+</head>
+<body id="result">
+<script>
+  let x = 0
+  const rolls = []
+  const ul = document.createElement('ul')
+  function roll(sides) {
+    return Math.floor(Math.random() * sides) + 1
+  }
+  let d = parseInt(prompt("How many sides would you like the die to have?"))
+  while (x === 0) {
+    let num = roll(d)
+    switch (num) {
+      case d:
+        rolls.push(num);
+        x = 1;
+        break;
+      default:
+        rolls.push(num);
+        break;
+    }
+  }
+  for (let i = 0; i < rolls.length; i++) {
+    let li = document.createElement('li')
+    li.textContent = rolls[i]
+    ul.appendChild(li)
+  }
+  document.querySelector('#result').appendChild(ul)
+</script>
+</body>
+</html>
