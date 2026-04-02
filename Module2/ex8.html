@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex8</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let array = ["Johnny", "DeeDee", "Joey", "Marky"]
+    function concat(array) {
+        let string = ""
+        for (let i = 0; i < array.length; i++) {
+            string = string + array[i]
+        }
+        return string;
+    }
+
+    document.querySelector("#result").innerHTML = concat(array)
+</script>
+</body>
+</html>
