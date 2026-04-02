@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex9</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+  let posprim = parseInt(prompt("Enter a number: "))
+  let check = 0
+  for (i = 1; i <= posprim; i++) {
+    switch (posprim % i) {
+      case 0:
+        check++
+    }
+  }
+  switch (check) {
+    case 2:
+      document.querySelector("#result").innerHTML = posprim + " is a prime number";
+      break;
+    default:
+      document.querySelector("#result").innerHTML = posprim + " is not a prime number";
+      break;
+  }
+</script>
+</body>
+</html>
