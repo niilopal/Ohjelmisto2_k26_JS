@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex10</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+  let dice = parseInt(prompt("Enter the number of dice:"))
+  let sum = parseInt(prompt("Enter desired sum:"))
+  let check = 0
+  for (let i = 0; i < 100000; i++) {
+    let ssum = 0
+    for (let i = 0; i < dice; i++) {
+      ssum = ssum + Math.floor(Math.random() * 6) + 1
+    }
+    switch (ssum) {
+      case sum:
+        check++;
+        break;
+    }
+  }
+  let prob = check/1000
+  document.querySelector("#result").innerHTML = "Probability to get sum " + sum + " with " + dice + " is " + prob + "%"
+</script>
+</body>
+</html>
