@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex8</title>
+</head>
+<body id="result">
+<script>
+    const ul = document.createElement('ul')
+    let syear = parseInt(prompt("Enter start year:"))
+    let eyear = parseInt(prompt("Enter end year: "))
+    for (let i = syear; i <= eyear; i++) {
+        switch (i % 4) {
+            case 0:
+                switch (i % 100) {
+                    case 0:
+                        switch (i % 400) {
+                            case 0:
+                                let li = document.createElement('li')
+                                li.textContent = i
+                                ul.appendChild(li)
+                                break;
+                        }
+                        break;
+                    default:
+                        let li = document.createElement('li')
+                        li.textContent = i
+                        ul.appendChild(li)
+                }
+                break;
+        }
+    }
+    document.querySelector("#result").appendChild(ul)
+</script>
+</body>
+</html>
