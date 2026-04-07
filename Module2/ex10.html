@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    const candidates = []
+    let candidates = []
     let round = parseInt(prompt("Enter number of candidates:"))
     for (let i = 0; i < round; i++) {
         let number = i + 1
@@ -26,7 +26,7 @@
             }
         }
     }
-    candidates.sort(function (a, b) {return a-b})
+    candidates = candidates.sort(function (a, b) {return b.votes - a.votes})
     console.log("The winner is " + candidates[0]['name'] + " with " + candidates[0]['votes'] + " votes")
     console.log("Results:")
     for (let i = 0; i < round; i++) {
