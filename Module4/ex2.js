@@ -1,4 +1,4 @@
-//requires running CORS.py api
+//requires running CORS_tvmaze.py api
 document.querySelector("form").addEventListener('submit', async function(submit) {
     submit.preventDefault()
     const url = `http://127.0.0.1:3000/shows/${document.querySelector("input[name='q']").value}`

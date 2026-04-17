@@ -1,4 +1,4 @@
-#Must be running for all exercises of the module except ex 1
+#Must be running for exercises 2-4
 from flask import Flask
 from flask_cors import CORS
 import requests, json
