@@ -13,9 +13,11 @@ document.querySelector("form").addEventListener('submit', async function(submit)
             a.setAttribute('href', json[i]['show']['url'])
             art.appendChild(a)
             const image = document.createElement('img')
-            image.setAttribute('src', json[i]['show']['image']['medium'])
-            image.setAttribute('alt', json[i]['show']['name'])
-            art.appendChild(image)
+            if (json[i]['show']['image']) {
+                image.setAttribute('src', json[i]['show']['image']['medium'])
+                image.setAttribute('alt', json[i]['show']['name'])
+                art.appendChild(image)
+            }
             const summary = document.createElement('div')
             summary.innerHTML = json[i]['show']['summary']
             art.appendChild(summary)
